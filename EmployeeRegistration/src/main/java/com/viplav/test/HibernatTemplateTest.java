@@ -4,7 +4,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.viplav.dao.impl.PersonDAOImpl;
-import com.viplav.form.PersonForm;
 import com.viplav.model.PersonEntity;
 
 public class HibernatTemplateTest {

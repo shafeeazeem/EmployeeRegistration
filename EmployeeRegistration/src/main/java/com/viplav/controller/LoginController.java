@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import com.viplav.dao.impl.PersonDAOImpl;
 import com.viplav.form.PersonForm;
 import com.viplav.form.UserForm;
+import com.viplav.model.PersonEntity;
 
 /**
  * @author Rammohan
@@ -78,8 +80,14 @@ public class LoginController extends WebMvcConfigurerAdapter{
 	        model.addAttribute("passWord",personForm.getLastName());*/
 	       /* PersonDAOImpl personDAO = new PersonDAOImpl();
 	        personDAO.addPerson(personForm);*/
-	        this.daoImpl.addPerson(personForm);
+	        PersonEntity person = new PersonEntity();
+	        person.setFirstName(personForm.getFirstName());
+	        person.setLastName(personForm.getLastName());
+	        this.daoImpl.addPerson(person);
 	        return "home";
 	        
 		}
+		
+		
+		
 }
