@@ -1,10 +1,11 @@
+
 package com.viplav.form;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
-
+// Used to store Person form data
 public class PersonForm {
 
 @NotEmpty

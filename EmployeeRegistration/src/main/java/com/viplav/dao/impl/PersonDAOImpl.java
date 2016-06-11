@@ -9,6 +9,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.viplav.dao.personDAO;
 import com.viplav.form.PersonForm;
@@ -20,7 +22,7 @@ import com.viplav.model.PersonEntity;
  */
 public class PersonDAOImpl implements personDAO {
 
-	@Autowired
+	
     private SessionFactory sessionFactory;
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
